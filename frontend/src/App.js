@@ -14,8 +14,8 @@ function App() {
           <Route path="/" element={<MainPage />} />
            <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
-          <Route path="/geminiApi" element={<Gemini_api/>} />
           <Route path="/main-page" element={<MainPage />} />
+          <Route path="/geminiApi" element={<Gemini_api/>} />
         </Routes>
       </BrowserRouter>
     </div>
