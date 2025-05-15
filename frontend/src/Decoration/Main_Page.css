@@ -1,7 +1,13 @@
 /* Main_Page.css */
-.main-container {
+.main-content {
   text-align: center;
-  margin-top: 50px;
+  margin: 100px auto;
+  background-color: white;       /* ✅ White box */
+  width: 100%;
+  max-width: 800px;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
 }
 
 .main-header {
@@ -43,4 +49,111 @@
 
 .logout-button:hover {
   transform: scale(1.05);
+}
+/*Row Column========================================*/
+/* Reusable Row */
+.row1 {
+  display: flex;
+  flex-wrap: wrap;
+  border: 2px solid #1976d2;
+  margin: 0 -15px;
+  background-color: #8a8a8a; 
+}
+
+/* Reusable Column */
+.column1 {
+  padding: 15px;
+  max-width: 100%;
+  flex: 1;
+  box-sizing: border-box;
+  border: 10px solid #ff0000;
+  background-color: #f9f9f9;
+}
+
+/* Optional: Column size helpers */
+.col-1 { flex: 1; }
+.col-2 { flex: 2; }
+.col-3 { flex: 3; }
+
+/*Navigation bar========================================*/
+
+/* Main_Page.css */
+
+.main-container {
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 15px 30px;
+  color: white;
+}
+
+.navbar-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 15px;
+}
+
+.nav-button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 8px 12px;
+  transition: background-color 0.3s ease;
+  border-radius: 5px;
+}
+
+.nav-button:hover {
+  background-color: #555;
+}
+
+.logout {
+  background-color: #5c4a4a;
+  color: white;
+}
+
+.logout:hover {
+  background-color: #2f2525;
+}
+
+.main-content {
+  text-align: center;
+  display: flex; 
+  width: 100%;
+  margin-top: 80px;
+}
+
+.main-header {
+  font-size: 2rem;
+  color: #333;
+}
+
+
+/*=============================*/
+
+.request-button {
+  background-color: #d3cdcd;
+  border: none;
+  color: rgb(0, 0, 0);
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 8px 12px;
+  transition: background-color 0.3s ease;
+  border-radius: 5px;
+}
+
+.request-button:hover {
+  background-color: #696666;
+  color: rgb(255, 255, 255);
 }
