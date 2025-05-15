@@ -1,0 +1,8 @@
+# backend/.dockerignore
+
+# *.go
+*.md
+*.log
+vendor/
+tmp/
+.git
