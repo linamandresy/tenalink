@@ -1,7 +1,7 @@
 # backend/Dockerfile
 
 # Build stage
-FROM golang:1.21 AS build
+FROM golang:1.23 AS build
 
 WORKDIR /app
 
