@@ -1,0 +1,15 @@
+.SignupButton{
+    background-color: #0077b5;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.SignupButton:hover{
+    background-color: #005689;
+}
