@@ -1,0 +1,92 @@
+# ✅ TenaLink Development TODO List
+
+A decentralized trust and credential network for newcomers and professionals using the Stellar blockchain.
+
+---
+
+## 🔧 Backend (Golang)
+
+### 🔐 Authentication & User Management
+- [ ] Generate and store Stellar keypair on user registration
+- [ ] Save user metadata (name, email, etc.) linked to public key
+- [ ] Basic authentication (JWT or token-based)
+
+### 📜 Credential Management
+- [ ] `POST /issue`: Endpoint to issue a credential/referral
+- [ ] `GET /credentials/:pubkey`: List credentials received by a public key
+- [ ] `GET /verify/:tx_hash`: Verify credential via Stellar transaction
+- [ ] Optional: Store IPFS hash of off-chain documents (e.g., PDF of reference letter)
+
+### 💡 Trust Graph Logic
+- [ ] Track issuers and recipients in a graph structure
+- [ ] Implement logic to compute trust path
+- [ ] Display depth/degree of trust from verified sources
+
+### 🌍 Blockchain Interaction
+- [x] Connect to Stellar testnet
+- [x] Fund test accounts using Friendbot
+- [ ] Build, sign, and submit credential transactions
+- [ ] Add memo or data field to describe certification
+- [ ] Fetch & parse transactions from Horizon
+
+---
+
+## 🌐 Frontend (React)
+
+### 🎨 UI Pages
+- [ ] Signup / Login form
+- [ ] Dashboard with profile and issued/received credentials
+- [ ] Form to issue a credential to another user
+- [ ] Public profile page showing user's certs
+- [ ] Trust graph visualization (basic version)
+
+### 🔌 API Integration
+- [ ] Connect to backend endpoints via Axios/Fetch
+- [ ] Handle error & success messages
+- [ ] Display Stellar transaction status (confirmed/pending)
+
+### 📸 UI Enhancements
+- [ ] Add profile photo and basic user info
+- [ ] Show list of people you’ve certified or been certified by
+- [ ] Add visual badges (trusted, verified, expired)
+
+---
+
+## 🚢 Deployment
+
+### 🐳 Docker
+- [x] Create `Dockerfile` for backend
+- [ ] Set up `.dockerignore` and `.env` files
+- [ ] Deploy backend to **Render.com**
+
+### 🌐 Frontend Hosting
+- [ ] Deploy frontend on **Vercel**, **Netlify**, or **Render**
+
+### 🔧 Environment
+- [ ] Set up environment variables on hosting platform
+- [ ] Use Stellar testnet for demo
+
+---
+
+## 📄 Documentation & Submission
+
+- [ ] Record demo video (with audio, 2–5 mins)
+- [ ] Add screenshots of UI in the README
+- [ ] Add `README.md` with:
+  - [x] Project description
+  - [x] Blockchain interaction explanation
+  - [ ] Demo video link
+  - [ ] Repo structure
+- [ ] Double-check judging criteria match
+
+---
+
+## ⭐ Bonus (if time permits)
+- [ ] Visualize trust score or connection depth
+- [ ] Implement certificate revocation or expiration UI
+- [ ] Add QR code for verifying on-chain credential
+- [ ] Use IPFS to store actual documents (e.g., PDF)
+
+---
+
+🛠️ **Next Step**: Finalize backend API contract and start building key endpoints.
