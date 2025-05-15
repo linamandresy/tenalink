@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../styles/Login.css";
+import geminiApi from "../Components/Gemini_api";
 
 const SignUp = () => {
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
     email: "",
+    password: "",
     institution: "",
     dateOfBirth: "",
     countryOfBirth: "",
@@ -15,6 +17,7 @@ const SignUp = () => {
     companyPreference: "",
     accountType: "",
   });
+
   const navigate = useNavigate();
 
   const handleChange = (e) => {
@@ -26,7 +29,7 @@ const SignUp = () => {
     e.preventDefault();
     // Handle signup logic here
     alert("Signup successful!");
-    navigate("/login");
+    navigate("/geminiApi");
   };
 
   return (
@@ -80,6 +83,15 @@ const SignUp = () => {
           name="email"
           placeholder="Email"
           value={formData.email}
+          onChange={handleChange}
+          required
+          style={{ padding: 8, borderRadius: 4, border: "1px solid #ccc" }}
+        />
+        <input
+          type="password"
+          name="password"
+          placeholder="password"
+          value={formData.password}
           onChange={handleChange}
           required
           style={{ padding: 8, borderRadius: 4, border: "1px solid #ccc" }}
@@ -162,6 +174,7 @@ const SignUp = () => {
             color: "#fff",
             border: "none",
             fontWeight: "bold",
+            onClick: handleSubmit,
           }}
         >
           Sign Up
