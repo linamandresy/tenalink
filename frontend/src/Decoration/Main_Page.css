@@ -2,7 +2,7 @@
 .main-content {
   text-align: center;
   margin: 100px auto;
-  background-color: white;       /* ✅ White box */
+  background-color: rgb(105, 105, 105);
   width: 100%;
   max-width: 800px;
   padding: 40px;
@@ -55,7 +55,7 @@
 .row1 {
   display: flex;
   flex-wrap: wrap;
-  border: 2px solid #1976d2;
+  /*border: 2px solid #1976d2;*/
   margin: 0 -15px;
   background-color: #8a8a8a; 
 }
@@ -66,8 +66,8 @@
   max-width: 100%;
   flex: 1;
   box-sizing: border-box;
-  border: 10px solid #ff0000;
-  background-color: #f9f9f9;
+  /*border: 10px solid #ff0000;*/
+  background-color: #878787;
 }
 
 /* Optional: Column size helpers */
@@ -129,9 +129,20 @@
 
 .main-content {
   text-align: center;
-  display: flex; 
   width: 100%;
   margin-top: 80px;
+  justify-content: center;
+  align-items: center;
+  min-height: 300px;
+  
+  /* Glassmorphism styling */
+  background: rgba(255, 255, 255, 0.1);  /* semi-transparent */
+  border-radius: 16px;
+  padding: 40px;
+  backdrop-filter: blur(10px);           /* main blur effect */
+  -webkit-backdrop-filter: blur(10px);   /* for Safari */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 .main-header {
@@ -145,6 +156,7 @@
 .request-button {
   background-color: #d3cdcd;
   border: none;
+  margin: 2%;
   color: rgb(0, 0, 0);
   font-size: 1rem;
   cursor: pointer;

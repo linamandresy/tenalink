@@ -17,43 +17,51 @@ const MainPage = () => {
     <div className="main-container">
       <nav className="navbar">
         <div className="navbar-logo">TENA LINK</div>
-        <div className="navbar-links">
-          <button className="nav-button" onClick={() => alert("Go to Profile")}>
-            Profile
-          </button>
-          <button className="nav-button" onClick={() => alert("Go to Settings")}>
-            Settings
-          </button>
-          <button className="nav-button logout" onClick={handleLogout}>
-            Logout
-          </button>
-        </div>
+            <div className="navbar-links">
+                <button className="nav-button" onClick={() => alert("Go to Profile")}>
+                    Profile
+                </button>
+                <button className="nav-button" onClick={() => alert("Go to Settings")}>
+                    Settings
+                </button>
+                <button className="nav-button logout" onClick={handleLogout}>
+                    Logout
+                </button>
+            </div>
       </nav>
 
-    <div className="row1">
-        <div className="column1">
-            <div className="main-content">
-                <h1 className="main-header">Welcome to the Main Page</h1>
-                <p>Hello</p>
-            </div>
-        </div>
-    </div>
-      
-    <div className="row1">
-        <div className="main-content">
+        <div className="row1">
             <div className="column1">
-                <button className="request-button" onClick={() => alert("Go to Settings")}>
-                    NEW REQUEST
-                </button>
-            </div>
+                <div className="row1">
+                    <div className="main-content">
+                        <h1 className="main-header">Yo! Welcome to the TenaLink Main Page</h1>
+                        <button className="request-button" onClick={() => alert("Go to Settings")}>
+                            NEW REQUEST
+                        </button>
+                        <button className="request-button" onClick={() => alert("Go to Settings")}>
+                            DELETE REQUEST
+                        </button>
 
-            <div className="column1">
-                <button className="request-button" onClick={() => alert("Go to Settings")}>
-                    DELETE REQUEST
-                </button>
+                    </div>
+                </div>
             </div>
         </div>
-      </div>
+        {/**  
+        <div className="main-content">
+            <div className="row1">
+                    <div className="column1">
+                        <button className="request-button" onClick={() => alert("Go to Settings")}>
+                            NEW REQUEST
+                        </button>
+                    </div>
+                    <div className="column1">
+                        <button className="request-button" onClick={() => alert("Go to Settings")}>
+                            DELETE REQUEST
+                        </button>
+                    </div>
+            </div>
+        </div>
+        */}
     </div>
   );
 };
