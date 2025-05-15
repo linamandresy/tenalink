@@ -5,6 +5,8 @@ go 1.23
 toolchain go1.23.5
 
 require (
+	github.com/golang-jwt/jwt v3.2.2+incompatible
+	github.com/google/martian/v3 v3.3.3
 	github.com/joho/godotenv v1.5.1
 	github.com/stellar/go v0.0.0-20250513120640-0bd47ac02793
 	go.mongodb.org/mongo-driver v1.17.3
@@ -33,6 +35,7 @@ require (
 	github.com/youmark/pkcs8 v0.0.0-20240726163527-a2c0da244d78 // indirect
 	golang.org/x/crypto v0.31.0 // indirect
 	golang.org/x/exp v0.0.0-20231006140011-7918f672742d // indirect
+	golang.org/x/net v0.26.0 // indirect
 	golang.org/x/sync v0.10.0 // indirect
 	golang.org/x/sys v0.28.0 // indirect
 	golang.org/x/text v0.21.0 // indirect
