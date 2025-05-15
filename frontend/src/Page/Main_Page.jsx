@@ -1,6 +1,11 @@
+import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
+import "../Decoration/Main_Page.css"; // Import the CSS file
 import React from "react";
 
-import "../Decoration/Main_Page.css"; // Import the CSS file
+function Main_Page() {
+  return <div></div>;
+}
 
 const MainPage = () => {
   const navigate = useNavigate();
