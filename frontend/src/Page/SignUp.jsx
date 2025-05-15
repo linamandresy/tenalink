@@ -1,6 +1,5 @@
-import React, { useState } from "react";
 
-export default function SignUp() {
+export default function Signup() {
   return (
     <div>
       <h1>Sign Up</h1>
