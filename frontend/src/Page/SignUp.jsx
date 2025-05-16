@@ -43,7 +43,7 @@ const SignUp = () => {
     <div
       style={{
         maxWidth: 350,
-        margin: "60px auto",
+        margin: "0px auto",
         padding: 24,
         border: "1px solid #eee",
         borderRadius: 8,
@@ -52,11 +52,11 @@ const SignUp = () => {
       }}
     >
       <img
-        src="https://www.pngfind.com/pngs/m/665-6659827_enterprise-comments-default-company-logo-png-transparent-png.png"
+        src="https://sdmntprwestus2.oaiusercontent.com/files/00000000-c534-61f8-a31d-998f3d93a48f/raw?se=2025-05-16T16%3A18%3A13Z&sp=r&sv=2024-08-04&sr=b&scid=00000000-0000-0000-0000-000000000000&skoid=732f244e-db13-47c3-bcc7-7ee02a9397bc&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-05-16T13%3A18%3A17Z&ske=2025-05-17T13%3A18%3A17Z&sks=b&skv=2024-08-04&sig=U6lw4dxLQG9btpkgJg7uqUajdGMYAWSc4BqY5pXiY8k%3D"
         alt="logo"
         className="Logo"
         style={{
-          width: "50%",
+          width: "40%",
           height: "150px",
           margin: "auto",
           display: "block",
