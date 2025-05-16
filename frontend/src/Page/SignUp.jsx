@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../styles/Login.css";
-import geminiApi from "../Components/Gemini_api";
+import MainPage from "./Main_Page";
 
 const SignUp = () => {
   const [formData, setFormData] = useState({
@@ -21,15 +21,22 @@ const SignUp = () => {
   const navigate = useNavigate();
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
+    const { name, value, multiple } = e.target;
+    if (multiple) {
+      const selectedOptions = Array.from(e.target.selectedOptions).map(
+        (option) => option.value
+      );
+      setFormData((prev) => ({ ...prev, [name]: selectedOptions }));
+    } else {
+      setFormData((prev) => ({ ...prev, [name]: value }));
+    }
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     // Handle signup logic here
     alert("Signup successful!");
-    navigate("/geminiApi");
+    navigate("/MainPage");
   };
 
   return (
@@ -41,6 +48,7 @@ const SignUp = () => {
         border: "1px solid #eee",
         borderRadius: 8,
         boxShadow: "0 2px 8px #f0f1f2",
+        backgroundColor: "white",
       }}
     >
       <img
@@ -117,11 +125,20 @@ const SignUp = () => {
         <input
           type="text"
           name="countryOfBirth"
-          placeholder="Country of Birth"
+          placeholder="Enter your nationality"
           value={formData.countryOfBirth}
           onChange={handleChange}
           required
-          style={{ padding: 8, borderRadius: 4, border: "1px solid #ccc" }}
+          style={{
+            padding: 8,
+            borderRadius: 4,
+            border: "1px solid #ccc",
+            width: "100%",
+            backgroundColor: "white",
+            color: "black",
+            marginBottom: "16px",
+            height: "40px",
+          }}
         />
         <input
           type="text"
@@ -148,12 +165,19 @@ const SignUp = () => {
           value={formData.skills}
           onChange={handleChange}
           required
+          multiple
           style={{ padding: 8, borderRadius: 4, border: "1px solid #ccc" }}
         >
           <option value="">Select Skills</option>
           <option value="AI">AI</option>
           <option value="Web Dev">Web Dev</option>
           <option value="Cloud Programming">Cloud Programming</option>
+          <option value="Mobile Dev">Mobile Dev</option>
+          <option value="Data Science">Data Science</option>
+          <option value="DevOps">DevOps</option>
+          <option value="Cybersecurity">Cybersecurity</option>
+          <option value="Blockchain">Blockchain</option>
+          <option value="Game Dev">Game Dev</option>
           <option value="Other">Other</option>
         </select>
         <input

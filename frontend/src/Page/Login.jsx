@@ -36,6 +36,7 @@ const Login = () => {
         border: "1px solid #eee",
         borderRadius: 8,
         boxShadow: "0 2px 8px #f0f1f2",
+        backgroundColor: "white",
       }}
     >
       <img

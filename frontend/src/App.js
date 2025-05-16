@@ -15,7 +15,7 @@ function App() {
           <Route path="/" element={<MainPage />} />
            <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
-          <Route path="/Main_Page" element={<MainPage />} />
+          <Route path="/mainpage" element={<MainPage />} />
           <Route path="/geminiApi" element={<Gemini_api/>} /> 
           <Route path="/newRequest" element={<NewRequest />} />
         </Routes>

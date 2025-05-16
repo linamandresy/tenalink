@@ -1,63 +1,166 @@
-.input-field{
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-    color: #333;
-    background-color: #f9f9f9;
-    transition: border-color 0.3s ease;
-    resize: none;
+.new-request-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-.submit-button{
-    width: 100%;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #007bff;
-    color: #fff;
-    cursor: pointer;
+.search-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
 }
 
-.response-container{
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f9f9f9;
-    transition: border-color 0.3s ease;
-    resize: none;
+.form-row {
+  display: flex;
+  gap: 15px;
 }
 
-.response-title{
-    font-size: 18px;
-    margin-bottom: 10px;
-    color: #333;
-    font-weight: bold;
-    text-align: left;
-    margin-left: 10px;
+.form-row input {
+  flex: 1;
 }
 
-.response-text{
-    font-size: 16px;
-    line-height: 1.6;
-    text-align: left;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    font-family: 'Arial', sans-serif;
+.search-form input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
 }
 
-.chatbot-title{
-    font-size: 24px;
-    margin-bottom: 20px;
-    color: #333;
-    font-weight: bold;
-    text-align: center;
+.search-form input[type="number"] {
+  -moz-appearance: textfield;
 }
 
+.search-form input[type="number"]::-webkit-outer-spin-button,
+.search-form input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 
+.search-form button {
+  padding: 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
 
+.search-form button:hover {
+  background-color: #0056b3;
+}
+
+.student-profile {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.student-info {
+  margin-bottom: 20px;
+}
+
+.student-info h2 {
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+.student-info p {
+  margin: 8px 0;
+  color: #34495e;
+}
+
+.student-info strong {
+  color: #2c3e50;
+}
+
+.subjects {
+  margin-top: 15px;
+}
+
+.subjects h3 {
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.subjects ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+}
+
+.subjects li {
+  background: #f8f9fa;
+  padding: 8px 12px;
+  border-radius: 4px;
+  color: #34495e;
+}
+
+.gemini-container {
+  margin-top: 20px;
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.gemini-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.gemini-header h3 {
+  margin: 0;
+  color: #2c3e50;
+  font-size: 1.1em;
+}
+
+.submit-button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  font-size: 0.9em;
+  transition: background-color 0.2s ease;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+}
+
+.submit-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.summary-container {
+  background: white;
+  padding: 15px;
+  border-radius: 6px;
+  border: 1px solid #e9ecef;
+}
+
+.summary-text {
+  margin: 0;
+  color: #34495e;
+  line-height: 1.5;
+  font-size: 0.95em;
+}
+
+.gemini-error {
+  color: #e74c3c;
+  background-color: #fde8e8;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin: 10px 0;
+  font-size: 0.9em;
+}

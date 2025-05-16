@@ -1,0 +1,424 @@
+{
+    "students": [
+      {
+        "id": 1,
+        "firstName": "Emma",
+        "lastName": "Johnson",
+        "startYear": 2020,
+        "endYear": 2024,
+        "degreeCompleted": true,
+        "program": "Computer Science",
+        "subjects": [
+          "Data Structures",
+          "Algorithms",
+          "Database Systems",
+          "Operating Systems",
+          "Software Engineering",
+          "Computer Networks",
+          "Artificial Intelligence",
+          "Web Development"
+        ],
+        "nationality": "United States",
+        "email": "emma.johnson@university.edu"
+      },
+      {
+        "id": 2,
+        "firstName": "Mohammed",
+        "lastName": "Al-Farsi",
+        "startYear": 2019,
+        "endYear": 2023,
+        "degreeCompleted": true,
+        "program": "Electrical Engineering",
+        "subjects": [
+          "Circuit Analysis",
+          "Digital Electronics",
+          "Power Systems",
+          "Control Systems",
+          "Electromagnetic Theory",
+          "Signal Processing",
+          "Microelectronics",
+          "Electric Machines"
+        ],
+        "nationality": "Saudi Arabia",
+        "email": "m.al-farsi@university.edu"
+      },
+      {
+        "id": 3,
+        "firstName": "Sophie",
+        "lastName": "Dubois",
+        "startYear": 2021,
+        "endYear": 2025,
+        "degreeCompleted": false,
+        "program": "Business Administration",
+        "subjects": [
+          "Financial Accounting",
+          "Marketing Management",
+          "Business Ethics",
+          "Organizational Behavior",
+          "Strategic Management",
+          "Operations Management",
+          "Business Law",
+          "International Business"
+        ],
+        "nationality": "France",
+        "email": "s.dubois@university.edu"
+      },
+      {
+        "id": 4,
+        "firstName": "Wei",
+        "lastName": "Chen",
+        "startYear": 2020,
+        "endYear": 2024,
+        "degreeCompleted": false,
+        "program": "Data Science",
+        "subjects": [
+          "Statistics",
+          "Machine Learning",
+          "Data Mining",
+          "Big Data Analytics",
+          "Python Programming",
+          "Data Visualization",
+          "Database Management",
+          "Deep Learning"
+        ],
+        "nationality": "China",
+        "email": "w.chen@university.edu"
+      },
+      {
+        "id": 5,
+        "firstName": "Lucas",
+        "lastName": "Silva",
+        "startYear": 2019,
+        "endYear": 2023,
+        "degreeCompleted": true,
+        "program": "Mechanical Engineering",
+        "subjects": [
+          "Thermodynamics",
+          "Fluid Mechanics",
+          "Materials Science",
+          "Machine Design",
+          "Heat Transfer",
+          "Manufacturing Processes",
+          "Control Systems",
+          "Robotics"
+        ],
+        "nationality": "Brazil",
+        "email": "l.silva@university.edu"
+      },
+      {
+        "id": 6,
+        "firstName": "Aisha",
+        "lastName": "Patel",
+        "startYear": 2021,
+        "endYear": 2025,
+        "degreeCompleted": false,
+        "program": "Medicine",
+        "subjects": [
+          "Anatomy",
+          "Physiology",
+          "Biochemistry",
+          "Pathology",
+          "Pharmacology",
+          "Clinical Skills",
+          "Medical Ethics",
+          "Internal Medicine"
+        ],
+        "nationality": "India",
+        "email": "a.patel@university.edu"
+      },
+      {
+        "id": 7,
+        "firstName": "Alexander",
+        "lastName": "Schmidt",
+        "startYear": 2020,
+        "endYear": 2024,
+        "degreeCompleted": false,
+        "program": "Physics",
+        "subjects": [
+          "Classical Mechanics",
+          "Quantum Mechanics",
+          "Electromagnetism",
+          "Thermodynamics",
+          "Statistical Physics",
+          "Nuclear Physics",
+          "Particle Physics",
+          "Astrophysics"
+        ],
+        "nationality": "Germany",
+        "email": "a.schmidt@university.edu"
+      },
+      {
+        "id": 8,
+        "firstName": "Yuki",
+        "lastName": "Tanaka",
+        "startYear": 2019,
+        "endYear": 2023,
+        "degreeCompleted": true,
+        "program": "Computer Engineering",
+        "subjects": [
+          "Digital Logic Design",
+          "Computer Architecture",
+          "Embedded Systems",
+          "VLSI Design",
+          "Computer Networks",
+          "Operating Systems",
+          "Microprocessors",
+          "Hardware Security"
+        ],
+        "nationality": "Japan",
+        "email": "y.tanaka@university.edu"
+      },
+      {
+        "id": 9,
+        "firstName": "Maria",
+        "lastName": "Garcia",
+        "startYear": 2021,
+        "endYear": 2025,
+        "degreeCompleted": false,
+        "program": "Psychology",
+        "subjects": [
+          "Cognitive Psychology",
+          "Developmental Psychology",
+          "Social Psychology",
+          "Abnormal Psychology",
+          "Research Methods",
+          "Biological Psychology",
+          "Personality Theory",
+          "Clinical Psychology"
+        ],
+        "nationality": "Spain",
+        "email": "m.garcia@university.edu"
+      },
+      {
+        "id": 10,
+        "firstName": "James",
+        "lastName": "O'Brien",
+        "startYear": 2020,
+        "endYear": 2024,
+        "degreeCompleted": false,
+        "program": "Law",
+        "subjects": [
+          "Constitutional Law",
+          "Criminal Law",
+          "Contract Law",
+          "Property Law",
+          "International Law",
+          "Corporate Law",
+          "Legal Research",
+          "Civil Procedure"
+        ],
+        "nationality": "Ireland",
+        "email": "j.obrien@university.edu"
+      },
+      {
+        "id": 11,
+        "firstName": "Fatima",
+        "lastName": "Khan",
+        "startYear": 2019,
+        "endYear": 2023,
+        "degreeCompleted": true,
+        "program": "Biochemistry",
+        "subjects": [
+          "Molecular Biology",
+          "Organic Chemistry",
+          "Cell Biology",
+          "Enzymology",
+          "Metabolic Pathways",
+          "Protein Structure",
+          "Genetics",
+          "Biotechnology"
+        ],
+        "nationality": "Pakistan",
+        "email": "f.khan@university.edu"
+      },
+      {
+        "id": 12,
+        "firstName": "Giovanni",
+        "lastName": "Rossi",
+        "startYear": 2021,
+        "endYear": 2025,
+        "degreeCompleted": false,
+        "program": "Architecture",
+        "subjects": [
+          "Architectural Design",
+          "Building Technology",
+          "History of Architecture",
+          "Urban Planning",
+          "Structural Design",
+          "Environmental Design",
+          "Digital Design",
+          "Construction Management"
+        ],
+        "nationality": "Italy",
+        "email": "g.rossi@university.edu"
+      },
+      {
+        "id": 13,
+        "firstName": "Sarah",
+        "lastName": "Anderson",
+        "startYear": 2020,
+        "endYear": 2024,
+        "degreeCompleted": false,
+        "program": "Environmental Science",
+        "subjects": [
+          "Ecology",
+          "Climate Science",
+          "Environmental Policy",
+          "Conservation Biology",
+          "Environmental Chemistry",
+          "Sustainable Development",
+          "Environmental Impact Assessment",
+          "Natural Resource Management"
+        ],
+        "nationality": "Canada",
+        "email": "s.anderson@university.edu"
+      },
+      {
+        "id": 14,
+        "firstName": "Hassan",
+        "lastName": "El-Masry",
+        "startYear": 2019,
+        "endYear": 2023,
+        "degreeCompleted": true,
+        "program": "Civil Engineering",
+        "subjects": [
+          "Structural Analysis",
+          "Geotechnical Engineering",
+          "Transportation Engineering",
+          "Hydraulics",
+          "Construction Management",
+          "Environmental Engineering",
+          "Surveying",
+          "Concrete Design"
+        ],
+        "nationality": "Egypt",
+        "email": "h.el-masry@university.edu"
+      },
+      {
+        "id": 15,
+        "firstName": "Anna",
+        "lastName": "Kowalski",
+        "startYear": 2021,
+        "endYear": 2025,
+        "degreeCompleted": false,
+        "program": "Mathematics",
+        "subjects": [
+          "Calculus",
+          "Linear Algebra",
+          "Differential Equations",
+          "Number Theory",
+          "Abstract Algebra",
+          "Real Analysis",
+          "Topology",
+          "Numerical Analysis"
+        ],
+        "nationality": "Poland",
+        "email": "a.kowalski@university.edu"
+      },
+      {
+        "id": 16,
+        "firstName": "David",
+        "lastName": "Kim",
+        "startYear": 2020,
+        "endYear": 2024,
+        "degreeCompleted": false,
+        "program": "Computer Science",
+        "subjects": [
+          "Data Structures",
+          "Algorithms",
+          "Database Systems",
+          "Operating Systems",
+          "Software Engineering",
+          "Computer Networks",
+          "Artificial Intelligence",
+          "Web Development"
+        ],
+        "nationality": "South Korea",
+        "email": "d.kim@university.edu"
+      },
+      {
+        "id": 17,
+        "firstName": "Isabella",
+        "lastName": "Martinez",
+        "startYear": 2019,
+        "endYear": 2023,
+        "degreeCompleted": true,
+        "program": "Business Administration",
+        "subjects": [
+          "Financial Accounting",
+          "Marketing Management",
+          "Business Ethics",
+          "Organizational Behavior",
+          "Strategic Management",
+          "Operations Management",
+          "Business Law",
+          "International Business"
+        ],
+        "nationality": "Mexico",
+        "email": "i.martinez@university.edu"
+      },
+      {
+        "id": 18,
+        "firstName": "Oliver",
+        "lastName": "Smith",
+        "startYear": 2021,
+        "endYear": 2025,
+        "degreeCompleted": false,
+        "program": "Economics",
+        "subjects": [
+          "Microeconomics",
+          "Macroeconomics",
+          "Econometrics",
+          "International Trade",
+          "Development Economics",
+          "Public Finance",
+          "Game Theory",
+          "Economic History"
+        ],
+        "nationality": "United Kingdom",
+        "email": "o.smith@university.edu"
+      },
+      {
+        "id": 19,
+        "firstName": "Zara",
+        "lastName": "Ahmed",
+        "startYear": 2020,
+        "endYear": 2024,
+        "degreeCompleted": false,
+        "program": "Political Science",
+        "subjects": [
+          "Political Theory",
+          "International Relations",
+          "Comparative Politics",
+          "Public Policy",
+          "Political Economy",
+          "Constitutional Law",
+          "Political Research Methods",
+          "Global Governance"
+        ],
+        "nationality": "United Arab Emirates",
+        "email": "z.ahmed@university.edu"
+      },
+      {
+        "id": 20,
+        "firstName": "Thomas",
+        "lastName": "Müller",
+        "startYear": 2019,
+        "endYear": 2023,
+        "degreeCompleted": true,
+        "program": "Chemical Engineering",
+        "subjects": [
+          "Chemical Process Design",
+          "Transport Phenomena",
+          "Reaction Engineering",
+          "Process Control",
+          "Unit Operations",
+          "Chemical Thermodynamics",
+          "Plant Design",
+          "Safety Engineering"
+        ],
+        "nationality": "Germany",
+        "email": "t.muller@university.edu"
+      }
+    ]
+  }

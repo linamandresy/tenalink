@@ -1,57 +1,78 @@
 import React, { useState } from "react";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import "../styles/Gemini_api.css";
+import studentData from "../data/students.json";
 
-const GeminiComponent = () => {
-  const [userInput, setUserInput] = useState("");
-  const [response, setResponse] = useState("");
+export const StudentAnalysis = ({ selectedStudent }) => {
+  const [summary, setSummary] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState("");
 
-  // Replace with your actual API key
+  // Initialize the API with environment variable
+  const genAI = new GoogleGenerativeAI(process.env.REACT_APP_GEMINI_API_KEY);
 
-  const apiKey = "AIzaSyAEZsM-vPqqwvpgidqBCvhHUJYRsh2dpXE";
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setIsLoading(true);
-
-    const genai = new GoogleGenerativeAI(apiKey);
-    const model = genai.getGenerativeModel({ model: "gemini-2.0-flash" });
+  const generateStudentSummary = async (student) => {
+    const prompt = `Please provide a concise summary of this student's academic profile, and at the end of the summary, talk about if he fit for the job:
+    Name: ${student.firstName} ${student.lastName}
+    Program: ${student.program}
+    Years: ${student.startYear} - ${student.endYear}
+    Nationality: ${student.nationality}
+    Subjects: ${student.subjects.join(", ")}
+    
+    Please focus on their academic strengths and potential career paths based on their program and subjects.`;
 
     try {
-      const result = await model.generateContent(userInput);
-      setResponse(result.response.text);
-    } catch (error) {
-      console.error("Error generating content:", error);
-      setResponse("Error: Could not generate content.");
+      const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
+      const result = await model.generateContent(prompt);
+      const response = await result.response;
+      return response.text();
+    } catch (err) {
+      console.error(`Error generating summary for ${student.firstName}:`, err);
+      return `Error generating summary for ${student.firstName} ${student.lastName}`;
+    }
+  };
+
+  const handleSummary = async () => {
+    if (!selectedStudent) return;
+
+    setIsLoading(true);
+    setError("");
+
+    try {
+      const summary = await generateStudentSummary(selectedStudent);
+      setSummary(summary);
+    } catch (err) {
+      setError("An error occurred while generating summary. Please try again.");
+      console.error("Summary Generation Error:", err);
     } finally {
       setIsLoading(false);
     }
   };
 
+  if (!selectedStudent) return null;
+
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
-        <h1 className="chatbot-title">ChatBot</h1>
-        <input
-          type="text"
-          value={userInput}
-          onChange={(e) => setUserInput(e.target.value)}
-          placeholder="Enter your prompt"
-          className="input-field"
-        />
-        <button type="submit" disabled={isLoading} className="submit-button">
-          {isLoading ? "Generating..." : "Get Response"}
+    <div className="gemini-container">
+      <div className="gemini-header">
+        <h3>AI Analysis</h3>
+        <button
+          onClick={handleSummary}
+          disabled={isLoading}
+          className="submit-button"
+        >
+          {isLoading ? "Generating..." : "Generate AI Analysis"}
         </button>
-      </form>
-      {response && (
-        <div className="response-container">
-          <h3 className="response-title">Response:</h3>
-          <p className="response-text">{response}</p>
+      </div>
+
+      {error && <div className="gemini-error">{error}</div>}
+
+      {summary && (
+        <div className="summary-container">
+          <p className="summary-text">{summary}</p>
         </div>
       )}
     </div>
   );
 };
 
-export default GeminiComponent;
+export default StudentAnalysis;
