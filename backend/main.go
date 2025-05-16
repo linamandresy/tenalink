@@ -31,6 +31,7 @@ func main() {
 	http.HandleFunc("/", handler)
 	http.HandleFunc("/api/signin", handlers.CreateAccountHandler)
 	http.HandleFunc("/api/login", handlers.LoginHandler)
+	http.HandleFunc("/api/certificates/issue", handlers.HandleIssueCertificate)
 	fmt.Println("Server is running on http://localhost:8080")
 	log.Fatal(http.ListenAndServe(":8080", nil))
 
