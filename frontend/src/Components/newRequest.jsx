@@ -37,8 +37,35 @@ const NewRequest = () => {
 
   return (
     <div className="new-request-container">
+      <h1
+        style={{
+          textAlign: "center",
+          color: "white",
+          marginTop: "20px",
+          marginBottom: "20px",
+          fontSize: "24px",
+          fontWeight: "bold",
+          textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)",
+          textTransform: "uppercase",
+          letterSpacing: "1px",
+          fontFamily: "Arial, sans-serif",
+          textDecoration: "underline",
+          textUnderlineOffset: "4px",
+          textDecorationColor: "rgba(255, 255, 255, 0.7)",
+        }}
+      >
+        New Request
+      </h1>
       <form onSubmit={handleSubmit} className="search-form">
-        <div className="form-row">
+        <div
+          className="form-row"
+          style={{
+            display: "flex",
+            gap: "10px",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
           <input
             type="text"
             name="firstName"
@@ -105,7 +132,16 @@ const NewRequest = () => {
             <img
               src="https://static.vecteezy.com/system/resources/previews/009/292/244/non_2x/default-avatar-icon-of-social-media-user-vector.jpg"
               alt="Student"
-              style={{ width: "100px", height: "100px" }}
+              style={{
+                width: "100px",
+                height: "100px",
+                borderRadius: "50%",
+                objectFit: "cover",
+                marginRight: "10px",
+                marginLeft: "10px",
+                marginTop: "10px",
+                marginBottom: "10px",
+              }}
             />
             <h2>
               {selectedStudent.firstName} {selectedStudent.lastName}
@@ -123,7 +159,21 @@ const NewRequest = () => {
             <p>
               <strong>Email:</strong> {selectedStudent.email}
             </p>
-            <div className="subjects">
+            <div
+              className="subjects"
+              style={{
+                marginTop: "10px",
+                marginBottom: "10px",
+                fontSize: "16px",
+                fontWeight: "bold",
+                textShadow: "2px 2px 4px rgba(0, 0, 0, 0.2)",
+                backgroundColor: "rgba(255, 255, 255, 0.1)",
+                backdropFilter: "blur(10px)",
+                boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
+                borderRadius: "5px",
+                padding: "10px",
+              }}
+            >
               <h3>Subjects:</h3>
               <ul>
                 {selectedStudent.subjects.map((subject, index) => (
